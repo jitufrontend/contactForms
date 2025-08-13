@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bombay DC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font.css">
+</head>
+<body id="top">
+    <!-- Header -->
+    <header class="header mx-6rem">
+        <div class="logo">LOGO</div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+           <img src="img/hamburger.svg" alt="hamburger">
+        </button>
+        
+        <nav class="nav" id="main-nav">
+            <a href="#projects">PROJECTS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#nri">NRI AREA</a>
+            <a href="#news">NEWS & THOUGHTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <!-- Close Button -->
+        <button class="mobile-close-btn" aria-label="Close navigation menu">
+            <span class="close-icon">×</span>
+        </button>
+        
+        <nav class="mobile-nav">
+            <a href="#projects">PROJECTS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#nri">NRI AREA</a>
+            <a href="#news">NEWS & THOUGHTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </div>
+
+    <!-- Map Background -->
+    <div class="map-background">
+        <img src="img/map.png" alt="Location Map" class="map-image">
+        <div class="location-marker"></div>
+        <div class="map-placeholder">Lorem ipsum dolor sit amet - consetetur sadipscing elitr</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content mx-6rem">
+        <!-- Left Section -->
+        <section class="left-section">
+            <h1 class="contact-heading">Contact Us</h1>
+            <p class="tagline">
+                When we aren't changing landscapes,<br>
+                we're making headlines.
+            </p>
+            
+            <!-- Mobile Contact Information (visible only on mobile) -->
+            <div class="mobile-contact-info">
+                <div class="contact-section">
+                    <h3 class="contact-title">Sales Enquiry</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <span class="contact-value">+91 000 0000 000</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span class="contact-value">test1@gmail.com</span>
+                    </div>
+                </div>
+                
+                <div class="contact-section">
+                    <h3 class="contact-title">Redevelopment Centre</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <span class="contact-value">+91 000 0000 000</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span class="contact-value">test2@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Form (hidden on mobile) -->
+            <form class="enquiry-form desktop-form" novalidate>
+                <h2 class="form-heading">Send us an Enquiry</h2>
+                
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Name" name="name" required minlength="2" maxlength="50">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email Address" name="email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Mobile Number" name="phone" required pattern="[0-9+\-\s\(\)]{10,15}">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="custom-select" data-name="category" data-placeholder="Query Type">
+                        <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-expanded="false">Query Type</button>
+                        <ul class="cs-menu" role="listbox">
+                            <li class="cs-option" role="option" data-value="residential">Residential</li>
+                            <li class="cs-option" role="option" data-value="commercial">Commercial</li>
+                            <li class="cs-option" role="option" data-value="industrial">Industrial</li>
+                        </ul>
+                        <input type="hidden" name="category" value="" required>
+                    </div>
+                    <div class="error-message" id="category-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="custom-select" data-name="project" data-placeholder="Select Project">
+                        <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-expanded="false">Select Project</button>
+                        <ul class="cs-menu" role="listbox">
+                            <li class="cs-option" role="option" data-value="project1">Project 1</li>
+                            <li class="cs-option" role="option" data-value="project2">Project 2</li>
+                            <li class="cs-option" role="option" data-value="project3">Project 3</li>
+                            <li class="cs-option" role="option" data-value="project4">Project 4</li>
+                            <li class="cs-option" role="option" data-value="project5">Project 5</li>
+                            <li class="cs-option" role="option" data-value="project6">Project 6</li>
+                        </ul>
+                        <input type="hidden" name="project" value="" required>
+                    </div>
+                    <div class="error-message" id="project-error"></div>
+                </div>
+
+                <div class="form-group d-flex justify-end">
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send</span>
+                        <span class="btn-loading" style="display: none;">
+                            <svg class="spinner" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                            Sending...
+                        </span>
+                    </button>
+                </div>
+
+                <div class="form-success" id="form-success" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank you!</h3>
+                    <p>Your enquiry has been sent successfully. We'll get back to you soon.</p>
+                </div>
+            </form>
+        </section>
+
+        <!-- Right Section -->
+        <section class="right-section">
+            <div class="contact-summary">
+                <p class="summary-text">
+                    Lorem ipsum dolor sit amet,
+                    consetetur sadipscing elitr, sed
+                    diam nonumy.
+                </p>
+                <div class="summary-contacts">
+                    +91 000 0000 000 | test1@gmail.com | test2@gmail.com
+                </div>
+
+                <div class="dept-card">
+                    <h3 class="dept-title">Sales Enquiry</h3>
+                    <p class="dept-phone">+91 000 0000 000</p>
+                    <p class="dept-email">test1@gmail.com</p>
+                </div>
+
+                <div class="dept-card">
+                    <h3 class="dept-title">Redevelopment Centre</h3>
+                    <p class="dept-phone">+91 000 0000 000</p>
+                    <p class="dept-email">test2@gmail.com</p>
+                </div>
+            </div>
+            
+            <!-- Mobile Send Enquiry Button (visible only on mobile) -->
+            <button class="mobile-enquiry-btn" id="mobile-enquiry-btn">
+                Send Enquiry
+            </button>
+        </section>
+    </main>
+
+    <!-- Mobile Form Modal -->
+    <div class="form-modal" id="form-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+                    ×
+                </button>
+            </div>
+            
+            <form class="enquiry-form mobile-form" novalidate>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Name" name="name" required minlength="2" maxlength="50">
+                    <div class="error-message" id="mobile-name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email Address" name="email" required>
+                    <div class="error-message" id="mobile-email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Mobile Number" name="phone" required pattern="[0-9+\-\s\(\)]{10,15}">
+                    <div class="error-message" id="mobile-phone-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="custom-select" data-name="category" data-placeholder="Query Type">
+                        <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-expanded="false">Query Type</button>
+                        <ul class="cs-menu" role="listbox">
+                            <li class="cs-option" role="option" data-value="residential">Residential</li>
+                            <li class="cs-option" role="option" data-value="commercial">Commercial</li>
+                            <li class="cs-option" role="option" data-value="industrial">Industrial</li>
+                        </ul>
+                        <input type="hidden" name="category" value="" required>
+                    </div>
+                    <div class="error-message" id="mobile-category-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="custom-select" data-name="project" data-placeholder="Select Project">
+                        <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-expanded="false">Select Project</button>
+                        <ul class="cs-menu" role="listbox">
+                            <li class="cs-option" role="option" data-value="project1">Project 1</li>
+                            <li class="cs-option" role="option" data-value="project2">Project 2</li>
+                            <li class="cs-option" role="option" data-value="project3">Project 3</li>
+                            <li class="cs-option" role="option" data-value="project4">Project 4</li>
+                            <li class="cs-option" role="option" data-value="project5">Project 5</li>
+                            <li class="cs-option" role="option" data-value="project6">Project 6</li>
+                        </ul>
+                        <input type="hidden" name="project" value="" required>
+                    </div>
+                    <div class="error-message" id="mobile-project-error"></div>
+                </div>
+
+                <div class="form-group d-flex justify-end">
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send</span>
+                        <span class="btn-loading" style="display: none;">
+                            <svg class="spinner" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                            Sending...
+                        </span>
+                    </button>
+                </div>
+
+                <div class="form-success" id="mobile-form-success" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank you!</h3>
+                    <p>Your enquiry has been sent successfully. We'll get back to you soon.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-upper mx-6rem">
+            <div class="footer-logo">LOGO</div>
+
+            <nav class="footer-links">
+                <a href="#" data-static="true">Projects</a>
+                <a href="#" data-static="true">About</a>
+                <a href="#" data-static="true">NRI Area</a>
+                <a href="#" data-static="true">News & Thoughts</a>
+                <a href="#" data-static="true">Employee Corner</a>
+                <a href="#" data-static="true">CSR</a>
+                <a href="#" data-static="true">Contact</a>
+                <a href="#" data-static="true">Disclaimer</a>
+            </nav>
+
+            <div class="newsletter">
+                <h3 class="newsletter-title">Get the latest news</h3>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" class="newsletter-input" placeholder="Enter email" aria-label="Email">
+                    <button class="newsletter-btn" type="button">Subscribe</button>
+                </form>
+            </div>
+
+            <a class="back-to-top" href="#top" aria-label="Back to top">
+                <span class="back-arrow">↑</span>
+                <span class="back-label">To the top</span>
+            </a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-lower mx-6rem">
+            <div class="cert-text">An ISO 9001:2008 Certified Company</div>
+            <div class="copyright">© copyrights 2019</div>
+            <div class="socials">
+               <img src="img/social.svg" alt="Social">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/validation.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script>
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[data-static="true"]');
+        if (a) e.preventDefault();
+      });
+      
+      // Mobile Navigation Menu
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const body = document.body;
+        
+        function toggleMobileMenu() {
+          const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+          mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+          mobileMenuOverlay.classList.toggle('active');
+          body.classList.toggle('menu-open');
+        }
+        
+        function closeMobileMenu() {
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay.classList.remove('active');
+          body.classList.remove('menu-open');
+        }
+        
+        // Toggle menu on button click
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        
+        // Close menu when clicking on overlay
+        mobileMenuOverlay.addEventListener('click', function(e) {
+          if (e.target === mobileMenuOverlay) {
+            closeMobileMenu();
+          }
+        });
+        
+        // Close menu when clicking on close button
+        const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+        if (mobileCloseBtn) {
+          mobileCloseBtn.addEventListener('click', closeMobileMenu);
+        }
+        
+        // Close menu when clicking on navigation links
+        const mobileNavLinks = mobileMenuOverlay.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+        
+        
+        
+        // Close menu on window resize (if switching to desktop)
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 768) {
+            closeMobileMenu();
+          }
+        });
+        
+      });
+    </script>
+</body>
+</html>
+
