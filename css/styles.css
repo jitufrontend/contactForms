@@ -855,6 +855,7 @@ select,
   text-decoration: none;
   color: #666;
   justify-self: end;
+  margin-top: auto;
 }
 .back-arrow {
   background: #2e66a6;
@@ -879,11 +880,45 @@ select,
 .socials { display: flex; gap: 14px; justify-self: end; }
 .social { width: 20px; height: 20px; background: #bbb; display: inline-block; border-radius: 2px; }
 @media (max-width: 992px) {
-  .footer-upper { grid-template-columns: 1fr; }
-  .back-to-top { justify-self: start; }
-  .footer-lower { grid-template-columns: 1fr; gap: 8px; text-align: left; }
-  .copyright { justify-self: start; }
-  .socials { justify-self: start; }
+  .footer-upper { 
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .footer-logo { 
+    justify-self: center; 
+    order: 3;
+    margin-top: 20px;
+  }
+  .footer-links { 
+    order: 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+  }
+  .newsletter { 
+    order: 1;
+    text-align: center;
+  }
+  .newsletter-form { 
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .newsletter-btn { 
+    width: 100%;
+    max-width: 200px;
+  }
+  .back-to-top { 
+    display: none; 
+  }
+  .footer-lower { 
+    grid-template-columns: 1fr; 
+    gap: 8px; 
+    text-align: center; 
+  }
+  .copyright { justify-self: center; }
+  .socials { justify-self: center; }
 }
 
 
